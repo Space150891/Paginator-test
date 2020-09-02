@@ -1,0 +1,82 @@
+.App {
+  background: #140e41;
+  height: 100vh;
+  display: flex;
+}
+
+.btn-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.btn {
+  font-family: 'monospace';
+  font-size: 17px;
+  font-weight: bolder;
+  background: transparent;
+  border-radius: 50% ;
+  color: #34c9e3;
+  background: #120c35;
+  border: 1px solid #34c9e3;
+  margin: 10px;
+  padding: 12px 17px 12px 17px;
+  box-shadow: 0px 0 6px 0px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.item-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  overflow: hidden;
+}
+.item {
+  font-weight: 900;
+  font-size: 16px;
+  color: #34c9e3;
+  border: 1px solid #34c9e3;
+  background: #120c35;
+  border-radius: 15px;
+  padding: 10px ;
+  margin: 10px;
+  box-shadow: 0px 0 6px 0px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.item:hover,
+.btn:hover {
+  box-shadow: 0px 0px 7px 1px rgb(4, 221, 243);
+}
+.btn:active, .active {
+  background: #eeb305;
+  box-shadow: 0px 0px 6px 1px rgb(4, 221, 243);
+  color: #030000;
+  font-weight: 600;
+  border-color: #030000;
+}
+
+
+
+@media (max-width: 1610px) {
+  .item-wrapper {
+    flex-wrap: wrap;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+@media (max-width: 630px) {
+  .item-wrapper {
+    width: 75%;
+  }
+  
+}
