@@ -3,9 +3,9 @@ import './App.css';
 import Paginator from './components/Paginator';
 import { paginatorStore } from './store/PaginatorStore';
 
-function App() {
+const App: React.FC = () => {
+  // find width of all items
   useEffect(() => {
-    console.log("HELLO")
     const elements: any = document.querySelectorAll('.item');
     elements.forEach((el: any) => {
       const elem = el.getBoundingClientRect();
@@ -13,19 +13,20 @@ function App() {
     });
   }, []);
 
+  //first screen render
   useEffect(() => {
-    console.log("EFFECT")
     paginatorStore.getVisibleItems(false)
-  })
+  });
 
-  function debounce(func: any) {
+  // timeout 
+  const debounce = (func: any) => {
     let timer: any;
     return function (event: any) {
       if (timer) clearTimeout(timer);
       timer = setTimeout(func, 500, event);
     };
   }
-
+  // screen resize
   window.addEventListener('resize', debounce((e: any) => {
     paginatorStore.resizeScreenWidth(e);
   }));

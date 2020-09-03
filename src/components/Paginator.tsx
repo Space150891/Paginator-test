@@ -10,10 +10,9 @@ const PaginateContainer: React.FC = () => {
         offset,
         activeItemIndex,
         toggleItem,
-        changeActiveItem,  
-    } = paginatorStore;
+        changeActiveItem
 
-    //console.log("FRONT LIMIT", limit)
+    } = paginatorStore;
 
     return (
         <div className="btn-wrapper">

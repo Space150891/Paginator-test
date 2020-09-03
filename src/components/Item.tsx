@@ -11,7 +11,6 @@ interface ItemProps {
 const PaginateItem: React.FC<ItemProps> = (props) => {
     const { item, toggleItem } = props
 
-
     return (
         <>
             <span
@@ -21,7 +20,6 @@ const PaginateItem: React.FC<ItemProps> = (props) => {
                 {item.title}
             </span>
         </>
-
     );
 };
 
